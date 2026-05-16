@@ -1,9 +1,9 @@
-FROM golang:1.23 AS builder
+FROM golang:1.26 AS builder
 
 ARG AH_MCP_VERSION=latest
 RUN CGO_ENABLED=0 GOOS=linux go install -trimpath -ldflags="-s -w" "github.com/mrserzhan/ah-mcp@${AH_MCP_VERSION}"
 
-FROM gcr.io/distroless/base-debian12:nonroot
+FROM ubuntu:26.04
 
 ENV AH_MCP_PORT=3000 \
     AH_CALLBACK_PORT=9876 \
