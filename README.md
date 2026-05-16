@@ -5,7 +5,8 @@ Docker build for ah-mcp (Albert Heijn MCP)
 
 This repository builds a container image for [`mrserzhan/ah-mcp`](https://github.com/mrserzhan/ah-mcp) and publishes it to GHCR:
 
-- `ghcr.io/<owner>/ah-mcp`
+- `ghcr.io/nphmuller/ah-mcp` for this repository
+- `ghcr.io/<your-owner>/ah-mcp` if you reuse this setup in another repository
 
 The default container command starts ah-mcp in remote Streamable HTTP mode:
 
